@@ -1,8 +1,8 @@
 /*
 * created by lu.yixin on 2017/12/12
 */
-import { base } from './base'
-const app = require('express')();
+import db from '../database'
+const app = require('express')()
 
 // 拦截器
 app.use((req, res, next) => {
@@ -10,6 +10,11 @@ app.use((req, res, next) => {
   next()
 });
 
-app.get('/', base);
+app.get('/', (req, res) => {
+  db.collection('test').find().toArray(function(err, items) {
+    db.close()
+    res.json(items)
+  })
+});
 
 export default app

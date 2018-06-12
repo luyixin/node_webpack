@@ -1,18 +1,19 @@
 {
-  "name": "storage",
+  "name": "msy-backend",
   "version": "1.0.0",
-  "description": "w3cvip search engine storage module",
+  "description": "a node project",
   "scripts": {
     "start": "nodemon --exec babel-node app.js --presets es2015,stage-2",
     "build": "webpack --config ./config/webpack.config"
   },
   "keywords": [],
-  "author": "馒头，紫木，jim",
+  "author": "lu.yixin <410780496@qq.com>",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mysql": "^2.15.0"
+    "mongodb": "^2.0.55",
+    "mongoskin": "^2.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
