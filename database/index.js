@@ -3,7 +3,7 @@
 */
 
 import mongo from 'mongoskin'
-var db = mongo.db('mongodb://127.0.0.1:27017/test', {native_parser:true})
+var db = mongo.db('mongodb://root:123456@localhost:27017/test', {native_parser:true})
 db.bind('test')
 
 export default db
